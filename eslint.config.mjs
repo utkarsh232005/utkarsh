@@ -1,4 +1,9 @@
+import eslintRecommended from "eslint/conf/eslint-recommended";
+import pluginReactRecommended from "eslint-plugin-react/configs/recommended";
+
 export default [
+  eslintRecommended,
+  pluginReactRecommended,
   {
     languageOptions: {
       globals: {
@@ -6,11 +11,7 @@ export default [
         document: true,
         process: true,
       },
-    }, // Closing the languageOptions object
-    extends: [
-      "eslint:recommended",
-      "plugin:react/recommended"
-    ],
+    },
     parserOptions: {
       ecmaFeatures: {
         jsx: true
